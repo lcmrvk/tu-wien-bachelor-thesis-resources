@@ -1,0 +1,56 @@
+services:
+
+  # --------------------------------- HotSpot ----------------------------------
+  hotspot_jvm_service:
+    tty: true
+    build:
+      context: dockerfiles
+      dockerfile: hotspot.dockerfile
+    image: lcmrvk/hotspot_image
+    container_name: lcmrvk_hotspot_container
+
+  # ---------------------------------- Graal -----------------------------------
+  graal_jvm_service:
+    tty: true
+    build:
+      context: dockerfiles
+      dockerfile: graal.dockerfile
+    image: lcmrvk/graal_image
+    container_name: lcmrvk_graal_container
+
+  # --------------------------------- OpenJ9 -----------------------------------
+  openj9_jvm_service:
+    tty: true
+    build:
+      context: dockerfiles
+      dockerfile: openj9.dockerfile
+    image: lcmrvk/openj9_image
+    container_name: lcmrvk_openj9_container
+
+  # ---------------------------------- Cacao -----------------------------------
+  cacao_jvm_service:
+    tty: true
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 10000
+        hard: 15000
+    build:
+      context: dockerfiles
+      dockerfile: cacao.dockerfile
+    image: lcmrvk/cacao_image
+    container_name: lcmrvk_cacao_container
+
+  # ---------------------------------- Jikes -----------------------------------
+  jikes_jvm_service:
+    tty: true
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 10000
+        hard: 15000
+    build:
+      context: dockerfiles
+      dockerfile: jikes.dockerfile
+    image: lcmrvk/jikes_image
+    container_name: lcmrvk_jikes_container

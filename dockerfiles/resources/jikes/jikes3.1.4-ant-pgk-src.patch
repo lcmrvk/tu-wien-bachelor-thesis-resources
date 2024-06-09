@@ -1,0 +1,70 @@
+diff --git a/build/components/asm.xml b/build/components/asm.xml
+index c92162f..5c55f87 100644
+--- a/build/components/asm.xml
++++ b/build/components/asm.xml
+@@ -36,10 +36,11 @@
+     </condition>
+   </target>
+ 
++  <!-- src="http://download.forge.objectweb.org/asm/asm-3.0.jar" -->
+   <target name="fetch" depends="init-asm-properties" if="asm.from-web">
+     <mkdir dir="${asm.dir}"/>
+     <cachedGet key="asm-${asm.version}.jar"
+-         src="http://download.forge.objectweb.org/asm/asm-3.0.jar"
++         src="https://repo1.maven.org/maven2/asm/asm/3.0/asm-3.0.jar"
+          dest="${asm.dir}/asm.jar"/>
+     <writeComponentConstants dir="${asm.dir}"/>
+   </target>
+diff --git a/build/components/dacapo.xml b/build/components/dacapo.xml
+index 6713b5e..bfebd1b 100644
+--- a/build/components/dacapo.xml
++++ b/build/components/dacapo.xml
+@@ -36,10 +36,11 @@
+     </condition>
+   </target>
+ 
++ <!-- src="http://sourceforge.net/projects/dacapobench/files/archive/${dacapo.version}/dacapo-${dacapo.version}.jar/download?use_mirror=autoselect" -->
+   <target name="fetch" depends="init-dacapo-properties" if="dacapo.from-web">
+     <mkdir dir="${dacapo.dir}"/>
+     <cachedGet key="dacapo-${dacapo.version}.jar"
+-         src="http://sourceforge.net/projects/dacapobench/files/archive/${dacapo.version}/dacapo-${dacapo.version}.jar/download?use_mirror=autoselect"
++         src="https://sourceforge.net/projects/dacapobench/files/archive/2006-10-MR2/dacapo-2006-10-MR2.jar/download"
+          dest="${dacapo.dir}/dacapo.jar"/>
+     <writeComponentConstants dir="${dacapo.dir}"/>
+   </target>
+diff --git a/build/components/hamcrest.xml b/build/components/hamcrest.xml
+index f05b999..b8046e5 100644
+--- a/build/components/hamcrest.xml
++++ b/build/components/hamcrest.xml
+@@ -30,11 +30,12 @@
+     </condition>
+   </target>
+ 
++ <!-- src="http://hamcrest.googlecode.com/files/${hamcrest.web-archive}" -->
+   <target name="fetch" depends="init-hamcrest-properties" if="hamcrest.from-web">
+     <property name="hamcrest.web-archive" value="hamcrest-all-${hamcrest.version}.jar"/>
+     <mkdir dir="${hamcrest.package.dir}"/>
+     <cachedGet key="${hamcrest.web-archive}"
+-         src="http://hamcrest.googlecode.com/files/${hamcrest.web-archive}"
++         src="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar"
+          dest="${hamcrest.package.dir}/${hamcrest.web-archive}"/>
+     <writeComponentConstants dir="${hamcrest.package.dir}"/>
+   </target>
+diff --git a/build/components/mockito.xml b/build/components/mockito.xml
+index 7439388..3f62f0a 100644
+--- a/build/components/mockito.xml
++++ b/build/components/mockito.xml
+@@ -30,11 +30,12 @@
+     </condition>
+   </target>
+ 
++  <!-- src="http://mockito.googlecode.com/files/mockito-all-${mockito.version}.jar" -->
+   <target name="fetch" depends="init-mockito-properties" if="mockito.from-web">
+     <property name="mockito.web-archive" value="mockito${mockito.version}.jar"/>
+     <mkdir dir="${mockito.package.dir}"/>
+     <cachedGet key="${mockito.web-archive}"
+-         src="http://mockito.googlecode.com/files/mockito-all-${mockito.version}.jar"
++         src="https://repo1.maven.org/maven2/org/mockito/mockito-all/1.9.5-rc1/mockito-all-1.9.5-rc1.jar"
+          dest="${mockito.package.dir}/${mockito.web-archive}"/>
+     <writeComponentConstants dir="${mockito.package.dir}"/>
+   </target>

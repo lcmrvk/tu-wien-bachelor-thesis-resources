@@ -54,3 +54,12 @@ services:
       dockerfile: jikes.dockerfile
     image: lcmrvk/jikes_image
     container_name: lcmrvk_jikes_container
+
+  # ---------------------------------- Dalvik ------------------------------------
+  dalvik_jvm_service:
+    tty: true
+    build:
+      context: dockerfiles
+      dockerfile: dalvik.dockerfile
+    image: lcmrvk/dalvik_image
+    container_name: lcmrvk_dalvik_container

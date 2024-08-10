@@ -3,7 +3,7 @@
 
 Thanks to [dinfuehr](https://gist.github.com/dinfuehr) whose work I used as a
 basis for creating the Dockerfile for Cacao  [dockerfile-cacao-dinfuehr](https://gist.github.com/dinfuehr/ab83ad825cd24be0e816588d0465a7fb) and thanks to [Jozott00](https://github.com/Jozott00)
-for finding the time discuss some issues with building Cacao and pointing me in the direction of his setup [cacao-jvm-dev-setup](https://github.com/Jozott00/cacao-jvm-dev-setup/tree/master).
+for finding the time to discuss some issues with building Cacao and pointing me in the direction of his setup [cacao-jvm-dev-setup](https://github.com/Jozott00/cacao-jvm-dev-setup/tree/master).
 
 # Getting Started
 
